@@ -6,6 +6,6 @@ public class SimpleCrosshair : MonoBehaviour {
 
     void OnGUI()
     {
-        GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 30, 30), "");
+        GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 10, 10), "");
     }
 }
