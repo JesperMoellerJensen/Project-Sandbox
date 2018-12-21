@@ -8,13 +8,8 @@ namespace Assets.Scripts.Tools
         public GameObject Entity1;
         public GameObject Entity2;
 
-        // Update is called once per frame
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                Weld();
-            }
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 SelectObject();
@@ -30,6 +25,7 @@ namespace Assets.Scripts.Tools
 
         }
 
+        //TODO: make sure that welding stuff doesn't unfreeze the objects
         void Weld()
         {
             Destroy(Entity1.GetComponent<Rigidbody>());
@@ -139,6 +135,7 @@ namespace Assets.Scripts.Tools
             else if(target != Entity1)
             {
                 Entity2 = target;
+                Weld();
             }
         }
 
